@@ -1,194 +1,106 @@
-<svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <filter id="ludoShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0.02" dy="0.03" stdDeviation="0.025" flood-color="#000000" flood-opacity="0.2"/>
-    </filter>
-    <linearGradient id="ludoRedGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#E83E31"/>
-      <stop offset="100%" stop-color="#C62828"/>
-    </linearGradient>
-    <linearGradient id="ludoGreenGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#23A84E"/>
-      <stop offset="100%" stop-color="#1B5E20"/>
-    </linearGradient>
-    <linearGradient id="ludoBlueGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#249AD9"/>
-      <stop offset="100%" stop-color="#0D47A1"/>
-    </linearGradient>
-    <linearGradient id="ludoYellowGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#F8CD1F"/>
-      <stop offset="100%" stop-color="#D6A50E"/>
-    </linearGradient>
-    <radialGradient id="redSocket" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#B71C1C"/>
-      <stop offset="70%" stop-color="#E53935"/>
-      <stop offset="100%" stop-color="#FF5252"/>
-    </radialGradient>
-    <radialGradient id="greenSocket" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1B5E20"/>
-      <stop offset="70%" stop-color="#43A047"/>
-      <stop offset="100%" stop-color="#66BB6A"/>
-    </radialGradient>
-    <radialGradient id="blueSocket" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0D47A1"/>
-      <stop offset="70%" stop-color="#1E88E5"/>
-      <stop offset="100%" stop-color="#64B5F6"/>
-    </radialGradient>
-    <radialGradient id="yellowSocket" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#E0A800"/>
-      <stop offset="70%" stop-color="#FDD835"/>
-      <stop offset="100%" stop-color="#FFEE58"/>
-    </radialGradient>
-    <radialGradient id="ludoCenterGreenGradient" cx="7.5" cy="6.0" r="2.1" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#23A84E"/>
-      <stop offset="100%" stop-color="#1B5E20"/>
-    </radialGradient>
-    <radialGradient id="ludoCenterYellowGradient" cx="9.0" cy="7.5" r="2.1" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#F8CD1F"/>
-      <stop offset="100%" stop-color="#D6A50E"/>
-    </radialGradient>
-    <radialGradient id="ludoCenterBlueGradient" cx="7.5" cy="9.0" r="2.1" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#249AD9"/>
-      <stop offset="100%" stop-color="#0D47A1"/>
-    </radialGradient>
-    <radialGradient id="ludoCenterRedGradient" cx="6.0" cy="7.5" r="2.1" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#E83E31"/>
-      <stop offset="100%" stop-color="#C62828"/>
-    </radialGradient>
-  </defs>
-  <rect x="0" y="0" width="15" height="15" fill="#FAF9F6" />
-  <rect x="0" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="0" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="0" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="1" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="1" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="1" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="2" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="2" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="2" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="3" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="3" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="3" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="4" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="4" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="4" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="5" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="5" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="5" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="0" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="1" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="2" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="3" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="4" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="5" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="9" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="10" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="11" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="12" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="13" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="14" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="0" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="1" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="2" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="3" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="4" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="5" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="9" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="10" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="11" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="12" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="13" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="14" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="0" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="1" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="2" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="3" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="4" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="5" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="9" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="10" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="11" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="12" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="13" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="14" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="9" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="9" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="9" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="10" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="10" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="10" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="11" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="11" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="11" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="12" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="12" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="12" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="13" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="13" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="13" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="14" y="6" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="14" y="7" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="14" y="8" width="1" height="1" fill="#FAF9F6" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="1" y="7" width="1" height="1" fill="url(#ludoRedGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="2" y="7" width="1" height="1" fill="url(#ludoRedGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="3" y="7" width="1" height="1" fill="url(#ludoRedGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="4" y="7" width="1" height="1" fill="url(#ludoRedGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="5" y="7" width="1" height="1" fill="url(#ludoRedGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="1" width="1" height="1" fill="url(#ludoGreenGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="2" width="1" height="1" fill="url(#ludoGreenGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="3" width="1" height="1" fill="url(#ludoGreenGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="4" width="1" height="1" fill="url(#ludoGreenGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="5" width="1" height="1" fill="url(#ludoGreenGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="9" y="7" width="1" height="1" fill="url(#ludoYellowGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="10" y="7" width="1" height="1" fill="url(#ludoYellowGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="11" y="7" width="1" height="1" fill="url(#ludoYellowGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="12" y="7" width="1" height="1" fill="url(#ludoYellowGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="13" y="7" width="1" height="1" fill="url(#ludoYellowGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="9" width="1" height="1" fill="url(#ludoBlueGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="10" width="1" height="1" fill="url(#ludoBlueGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="11" width="1" height="1" fill="url(#ludoBlueGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="12" width="1" height="1" fill="url(#ludoBlueGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="7" y="13" width="1" height="1" fill="url(#ludoBlueGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="1" y="6" width="1" height="1" fill="url(#ludoRedGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="8" y="1" width="1" height="1" fill="url(#ludoGreenGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="13" y="8" width="1" height="1" fill="url(#ludoYellowGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="6" y="13" width="1" height="1" fill="url(#ludoBlueGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <path d="M 0,-0.32 L 0.09,-0.1 L 0.32,-0.1 L 0.14,0.07 L 0.22,0.32 L 0,0.16 L -0.22,0.32 L -0.14,0.07 L -0.32,-0.1 L -0.09,-0.1 Z" fill="none" stroke="#555555" stroke-width="0.04" stroke-linejoin="round" transform="translate(2.5, 8.5) scale(1.15)" />
-  <path d="M 0,-0.32 L 0.09,-0.1 L 0.32,-0.1 L 0.14,0.07 L 0.22,0.32 L 0,0.16 L -0.22,0.32 L -0.14,0.07 L -0.32,-0.1 L -0.09,-0.1 Z" fill="none" stroke="#555555" stroke-width="0.04" stroke-linejoin="round" transform="translate(6.5, 2.5) scale(1.15)" />
-  <path d="M 0,-0.32 L 0.09,-0.1 L 0.32,-0.1 L 0.14,0.07 L 0.22,0.32 L 0,0.16 L -0.22,0.32 L -0.14,0.07 L -0.32,-0.1 L -0.09,-0.1 Z" fill="none" stroke="#555555" stroke-width="0.04" stroke-linejoin="round" transform="translate(12.5, 6.5) scale(1.15)" />
-  <path d="M 0,-0.32 L 0.09,-0.1 L 0.32,-0.1 L 0.14,0.07 L 0.22,0.32 L 0,0.16 L -0.22,0.32 L -0.14,0.07 L -0.32,-0.1 L -0.09,-0.1 Z" fill="none" stroke="#555555" stroke-width="0.04" stroke-linejoin="round" transform="translate(8.5, 12.5) scale(1.15)" />
-  <!-- Start arrows -->
-  <path d="M -0.25,-0.1 L 0.05,-0.1 L 0.05,-0.22 L 0.3,0 L 0.05,0.22 L 0.05,0.1 L -0.25,0.1 Z" fill="#D9362B" transform="translate(0.5, 7.5) scale(0.9)" />
-  <path d="M -0.1,-0.25 L -0.1,0.05 L -0.22,0.05 L 0,0.3 L 0.22,0.05 L 0.1,0.05 L 0.1,-0.25 Z" fill="#1E9E49" transform="translate(7.5, 0.5) scale(0.9)" />
-  <path d="M 0.25,-0.1 L -0.05,-0.1 L -0.05,-0.22 L -0.3,0 L -0.05,0.22 L -0.05,0.1 L 0.25,0.1 Z" fill="#F4C41B" transform="translate(14.5, 7.5) scale(0.9)" />
-  <path d="M -0.1,0.25 L -0.1,-0.05 L -0.22,-0.05 L 0,-0.3 L 0.22,-0.05 L 0.1,-0.05 L 0.1,0.25 Z" fill="#1D8CCF" transform="translate(7.5, 14.5) scale(0.9)" />
-  <polygon points="6,6 9,6 7.5,7.5" fill="url(#ludoCenterGreenGradient)" stroke="#B9AA96" stroke-width="0.04" />
-  <polygon points="9,6 9,9 7.5,7.5" fill="url(#ludoCenterYellowGradient)" stroke="#B9AA96" stroke-width="0.04" />
-  <polygon points="6,9 9,9 7.5,7.5" fill="url(#ludoCenterBlueGradient)" stroke="#B9AA96" stroke-width="0.04" />
-  <polygon points="6,6 6,9 7.5,7.5" fill="url(#ludoCenterRedGradient)" stroke="#B9AA96" stroke-width="0.04" />
-  <rect x="0" y="0" width="6" height="6" fill="url(#ludoRedGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="1.0" y="1.0" width="4.0" height="4.0" rx="0.25" ry="0.25" fill="#FFFFFF" stroke="#D2D2D2" stroke-width="0.04" filter="url(#ludoShadow)" />
-  <circle cx="2.0" cy="2.0" r="0.45" fill="url(#redSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="4.0" cy="2.0" r="0.45" fill="url(#redSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="2.0" cy="4.0" r="0.45" fill="url(#redSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="4.0" cy="4.0" r="0.45" fill="url(#redSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <rect x="9" y="0" width="6" height="6" fill="url(#ludoGreenGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="10.0" y="1.0" width="4.0" height="4.0" rx="0.25" ry="0.25" fill="#FFFFFF" stroke="#D2D2D2" stroke-width="0.04" filter="url(#ludoShadow)" />
-  <circle cx="11.0" cy="2.0" r="0.45" fill="url(#greenSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="13.0" cy="2.0" r="0.45" fill="url(#greenSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="11.0" cy="4.0" r="0.45" fill="url(#greenSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="13.0" cy="4.0" r="0.45" fill="url(#greenSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <rect x="0" y="9" width="6" height="6" fill="url(#ludoBlueGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="1.0" y="10.0" width="4.0" height="4.0" rx="0.25" ry="0.25" fill="#FFFFFF" stroke="#D2D2D2" stroke-width="0.04" filter="url(#ludoShadow)" />
-  <circle cx="2.0" cy="11.0" r="0.45" fill="url(#blueSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="4.0" cy="11.0" r="0.45" fill="url(#blueSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="2.0" cy="13.0" r="0.45" fill="url(#blueSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="4.0" cy="13.0" r="0.45" fill="url(#blueSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <rect x="9" y="9" width="6" height="6" fill="url(#ludoYellowGradient)" stroke="#CCCCCC" stroke-width="0.04" />
-  <rect x="10.0" y="10.0" width="4.0" height="4.0" rx="0.25" ry="0.25" fill="#FFFFFF" stroke="#D2D2D2" stroke-width="0.04" filter="url(#ludoShadow)" />
-  <circle cx="11.0" cy="11.0" r="0.45" fill="url(#yellowSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="13.0" cy="11.0" r="0.45" fill="url(#yellowSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="11.0" cy="13.0" r="0.45" fill="url(#yellowSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <circle cx="13.0" cy="13.0" r="0.45" fill="url(#yellowSocket)" stroke="#CCCCCC" stroke-width="0.025" />
-  <rect x="0" y="0" width="15" height="15" fill="none" stroke="#CCCCCC" stroke-width="0.08" />
-</svg>
+Created At: 2026-06-06T07:14:30Z
+Completed At: 2026-06-06T07:14:30Z
+File Path: `file:///Users/prathamnagarmote/Downloads/libreludo-main/src/assets/board.svg`
+Total Lines: 1010
+Total Bytes: 41205
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+2: <!-- Created with Inkscape (http://www.inkscape.org/) -->
+3: 
+4: <svg
+5:    viewBox="0 0 396.87499 396.875"
+6:    version="1.1"
+7:    id="svg1"
+8:    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+9:    sodipodi:docname="ludo.svg"
+10:    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+11:    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+12:    xmlns="http://www.w3.org/2000/svg"
+13:    xmlns:svg="http://www.w3.org/2000/svg">
+14:   <sodipodi:namedview
+15:      id="namedview1"
+16:      pagecolor="#ffffff"
+17:      bordercolor="#000000"
+18:      borderopacity="0.25"
+19:      inkscape:showpageshadow="2"
+20:      inkscape:pageopacity="0.0"
+21:      inkscape:pagecheckerboard="0"
+22:      inkscape:deskcolor="#d1d1d1"
+23:      inkscape:document-units="px"
+24:      showgrid="true"
+25:      inkscape:zoom="2"
+26:      inkscape:cx="723"
+27:      inkscape:cy="1474.25"
+28:      inkscape:window-width="1920"
+29:      inkscape:window-height="1001"
+30:      inkscape:window-x="-9"
+31:      inkscape:window-y="-9"
+32:      inkscape:window-maximized="1"
+33:      inkscape:current-layer="svg1">
+34:     <inkscape:grid
+35:        id="grid1"
+36:        units="px"
+37:        originx="0"
+38:        originy="0"
+39:        spacingx="26.458333"
+40:        spacingy="26.458333"
+41:        empcolor="#0099e5"
+42:        empopacity="0.30196078"
+43:        color="#0099e5"
+44:        opacity="0.14901961"
+45:        empspacing="5"
+46:        dotted="false"
+47:        gridanglex="30"
+48:        gridan
+<truncated 30713 bytes>
+ill-opacity:1"
+753:      d="M 206.32132,238.3887 V 396.6111"
+754:      inkscape:label="SubminorXDiv1:0:1"
+755:      id="path567" />
+756:   <path
+757:      style="fill:#ffde15;stroke:#000000;stroke-width:0;fill-opacity:1"
+758:      d="M 201.06479,238.3887 V 396.6111"
+759:      inkscape:label="SubminorXDiv1:0:2"
+760:      id="path568" />
+761:   <path
+762:      style="fill:#1295e7;stroke:#000000;stroke-width:0;fill-opacity:1"
+763:      d="M 195.80835,238.3887 V 396.6111"
+764:      inkscape:label="SubminorXDiv1:0:3"
+765:      id="path569" />
+766:   <path
+767:      style="fill:#ffde15;stroke:#000000;stroke-width:0;fill-opacity:1"
+768:      d="M 190.55182,238.3887 V 396.6111"
+769:      inkscape:label="SubminorXDiv1:0:4"
+770:      id="path570" />
+771:   <path
+772:      style="fill:#ffde15;stroke:#000000;stroke-width:0;fill-opacity:1"
+773:      d="M 180.03886,238.3887 V 396.6111"
+774:      inkscape:label="SubminorXDiv2:0:1"
+775:      id="path571" />
+776:   <path
+777:      style="fill:#ffde15;stroke:#000000;stroke-width:0;fill-opacity:1"
+778:      d="M 174.78232,238.3887 V 396.6111"
+779:      inkscape:label="SubminorXDiv2:0:2"
+780:      id="path572" />
+781:   <path
+782:      style="fill:#ffde15;stroke:#000000;stroke-width:0;fill-opacity:1"
+783:      d="M 169.52579,238.3887 V 396.6111"
+784:      inkscape:label="SubminorXDiv2:0:3"
+785:      id="path573" />
+786:   <path
+787:      style="fill:#ffde15;stroke:#000000;stroke-width:0;fill-opacity:1"
+788:      d="M 164.26936,238.3887 V 396.6111"
+789:      inkscape:label="SubminorXDiv2:0:4"
+790:      id="path574" />
+791:   <rect
+792:      x="238.3887"
+793:      y="-237.86032"
+794:      width="158.2224"
+795:      height="78.847496"
+796:      style="fill:none;stroke:#000000;stroke-width:0.526529"
+797:      inkscape:label="Border"
+798:      id="rect574"
+799:      transform="rotate(90)" />
+800:   <path
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
