@@ -8,11 +8,7 @@ html,
 body {
   height: 100vh;
   max-width: 100vw;
-  background-color: #1c0e05;
-  background-image: url('./assets/wood_table_bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: transparent;
   font-family: 'Inter Variable', system-ui, sans-serif;
   --color-primary: #1e88e5;
   --color-primary-hover: #1565c0;

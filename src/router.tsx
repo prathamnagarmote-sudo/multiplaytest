@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
+import IntroPage from './pages/IntroPage/IntroPage.tsx';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen.tsx';
-import HomePage from './pages/HomePage/HomePage.tsx';
 import NotFound from './pages/NotFound/NotFound.tsx';
 import ErrorBoundary from './pages/ErrorBoundary/ErrorBoundary.tsx';
 import { lazy, Suspense, type LazyExoticComponent, type ReactElement } from 'react';
@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <IntroPage />,
       },
       {
         path: '/play',

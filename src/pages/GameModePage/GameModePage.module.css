@@ -1,0 +1,277 @@
+.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: radial-gradient(circle at 50% 20%, #0c2046 0%, #030a1c 100%);
+  background-image: 
+    radial-gradient(circle at 50% 20%, #0c2046 0%, #030a1c 100%),
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px, 20px 20px;
+  font-family: 'Inter Variable', system-ui, sans-serif;
+  color: white;
+  padding: 1rem;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background Watermarks */
+.watermarksContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.watermarkToken1, .watermarkToken2, .watermarkDie1, .watermarkDie2 {
+  position: absolute;
+  opacity: 0.05;
+  filter: blur(2px);
+}
+
+.watermarkToken1 {
+  width: 250px;
+  height: 300px;
+  top: -50px;
+  left: -80px;
+  transform: rotate(-15deg);
+}
+
+.watermarkToken2 {
+  width: 200px;
+  height: 250px;
+  bottom: 50px;
+  right: -60px;
+  transform: rotate(20deg);
+}
+
+.watermarkDie1 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: -30px;
+  transform: rotate(45deg);
+}
+
+.watermarkDie2 {
+  width: 120px;
+  height: 120px;
+  bottom: 15%;
+  left: -20px;
+  transform: rotate(-30deg);
+}
+
+/* Logo Header */
+.logoHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.crown {
+  font-size: 3rem;
+  margin-bottom: -15px;
+  z-index: 2;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.8));
+}
+
+.ludoText {
+  font-size: 50px;
+  font-weight: 900;
+  display: flex;
+  gap: 2px;
+  text-shadow: 
+    0 4px 0 #000,
+    0 6px 12px rgba(0,0,0,0.8),
+    0 0 15px rgba(255, 215, 0, 0.4);
+  margin: 0;
+  line-height: 1;
+}
+
+.letterL { color: #e53935; }
+.letterU { color: #fdd835; }
+.letterD { color: #43a047; }
+.letterO { color: #1e88e5; }
+
+/* Ludo Graphic Area */
+.graphicArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.boardWrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.9));
+  transform: perspective(600px) rotateX(15deg);
+  border: 8px solid #a16e38;
+  border-radius: 12px;
+  background: #deb887;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 10px 15px rgba(0,0,0,0.8);
+}
+
+.boardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.token {
+  position: absolute;
+  width: 35px;
+  height: 50px;
+  filter: drop-shadow(0 8px 6px rgba(0,0,0,0.7));
+  transform: translateZ(20px);
+}
+
+.tokenGreen { top: 15%; left: 15%; filter: hue-rotate(90deg) brightness(1.2); }
+.tokenBlue { top: 15%; right: 15%; filter: hue-rotate(200deg) brightness(1.2); }
+.tokenRed { bottom: 15%; left: 15%; filter: hue-rotate(0deg) brightness(1.2); }
+.tokenYellow { bottom: 15%; right: 15%; filter: hue-rotate(60deg) brightness(1.5); }
+
+.centerDice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(30px);
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 10px 8px rgba(0,0,0,0.8));
+}
+
+/* Yellow Continue Button matching PlayerSetup Play Button */
+.continueBtn {
+  background: linear-gradient(180deg, #ffca28 0%, #f57c00 100%);
+  border: 2px solid #ffb300;
+  border-radius: 16px;
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(245, 124, 0, 0.4);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.continueText {
+  color: #3e2723;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.chevron {
+  color: #d84315;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.continueBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(245, 124, 0, 0.6);
+  filter: brightness(1.1);
+}
+
+.continueBtn:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 10px rgba(245, 124, 0, 0.4);
+}
+
+@keyframes gentleBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+/* Wooden Button Grid */
+.buttonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.woodBtn {
+  position: relative;
+  background: linear-gradient(180deg, #6d4c41 0%, #3e2723 100%);
+  border: 2px solid #3e2723;
+  border-radius: 8px;
+  padding: 0.8rem 0.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 6px 0 #2b1a16, 0 10px 15px rgba(0,0,0,0.8), inset 0 0 0 2px #bcaaa4, inset 0 0 15px rgba(0,0,0,0.6);
+  transition: all 0.1s ease;
+}
+
+/* Golden screws in corners */
+.woodScrew {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #ffca28 0%, #f57c00 100%);
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 2px rgba(255,255,255,0.8), 1px 1px 2px rgba(0,0,0,0.8);
+}
+.woodScrew::after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+  height: 1px;
+  background: rgba(0,0,0,0.5);
+  transform: rotate(45deg);
+}
+
+.woodBtn:hover {
+  filter: brightness(1.1);
+}
+
+.woodBtn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #2b1a16, 0 5px 10px rgba(0,0,0,0.8), inset 0 0 0 2px #bcaaa4, inset 0 0 15px rgba(0,0,0,0.6);
+}
+
+.woodBtn.activeWood {
+  box-shadow: 0 6px 0 #2b1a16, 0 10px 15px rgba(0,0,0,0.8), inset 0 0 0 3px #ffca28, inset 0 0 15px rgba(0,0,0,0.6);
+  background: linear-gradient(180deg, #8d6e63 0%, #4e342e 100%);
+}
+
+.btnIcon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+}
+
+.woodBtnText {
+  color: #ffca28;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
