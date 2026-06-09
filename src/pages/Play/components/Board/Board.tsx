@@ -1,4 +1,4 @@
-import BoardImage from '../../../../assets/board.svg?react';
+import boardSvg from '../../../../assets/board.svg';
 import Token from '../Token/Token';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '../../../../state/store';
@@ -86,7 +86,7 @@ function Board({ onDiceClick: onDiceRoll }: Props) {
       <div className={`${styles.paddockGlow} ${styles.green} ${currentPlayerColour === 'green' ? styles.active : ''}`} />
       <div className={`${styles.paddockGlow} ${styles.yellow} ${currentPlayerColour === 'yellow' ? styles.active : ''}`} />
       <div className={`${styles.paddockGlow} ${styles.blue} ${currentPlayerColour === 'blue' ? styles.active : ''}`} />
-      <BoardImage className={styles.boardImage} aria-hidden="true" />
+      <img src={boardSvg} className={styles.boardImage} aria-hidden="true" />
     </div>
   );
 }
