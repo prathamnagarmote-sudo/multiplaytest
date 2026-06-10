@@ -98,7 +98,7 @@ function Token({ colour, id, tokenClickData }: Props) {
   }, [colour, executeTokenMove, id, tokenClickData, onlineContext, isLocked]);
 
   const handleTokenClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
-    if (e.detail === 0) e.stopPropagation();
+    e.stopPropagation();
     tokenElRef.current?.blur?.();
     if (onlineContext?.isOnline) {
       socket.emit('submit_move', {
@@ -107,8 +107,11 @@ function Token({ colour, id, tokenClickData }: Props) {
         isUnlock: isLocked
       });
     } else {
-      if (isLocked && isActive && diceNumber !== -1 && diceNumber) unlock();
-      executeTokenMove();
+      if (isLocked) {
+        if (isActive && diceNumber !== -1 && diceNumber) unlock();
+      } else {
+        executeTokenMove();
+      }
     }
   };
 

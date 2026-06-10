@@ -9,6 +9,8 @@ import {
   deactivateAllTokens,
   setIsAnyTokenMoving,
   declareForfeit,
+  incrementNumberOfConsecutiveSix,
+  resetNumberOfConsecutiveSix,
 } from '../../../../state/slices/playersSlice';
 import { type TPlayerColour } from '../../../../types';
 import Board from '../Board/Board';
@@ -179,10 +181,28 @@ function Game({
         dispatch(setIsPlaceholderShowing({ colour: localColor, isPlaceholderShowing: false }));
         dispatch(setDiceNumberDirect({ colour: localColor, diceNumber: data.roll }));
 
+        if (data.roll === 6) {
+          dispatch(incrementNumberOfConsecutiveSix(localColor));
+        } else {
+          dispatch(resetNumberOfConsecutiveSix(localColor));
+        }
+
         const state = store.getState();
         const playersList = state.players.players;
         const activePlayer = playersList.find(p => p.colour === localColor);
         if (!activePlayer) return;
+
+        if (activePlayer.numberOfConsecutiveSix === 3) {
+          dispatch(resetNumberOfConsecutiveSix(localColor));
+          dispatch(deactivateAllTokens(localColor));
+          if (localColor === myPlayerColour || (activePlayer.isBot && isHost)) {
+            setTimeout(() => {
+              const nextColour = getNextTurnColour(localColor, playerSequence);
+              socket.emit('finish_turn', { roomId, nextTurnColour: colorMap[nextColour] });
+            }, 1500);
+          }
+          return;
+        }
 
         const isBot = activePlayer.isBot;
 
