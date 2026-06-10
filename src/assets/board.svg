@@ -108,76 +108,60 @@
   <circle cx="80.0" cy="81.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="80.0" cy="80.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="80.0" cy="80.0" r="16.0" fill="none" stroke="url(#grad_red)" stroke-width="2.5" />
-  <circle cx="80.0" cy="80.0" r="4.8" fill="url(#grad_red)" />
   <circle cx="80.0" cy="161.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="80.0" cy="160.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="80.0" cy="160.0" r="16.0" fill="none" stroke="url(#grad_red)" stroke-width="2.5" />
-  <circle cx="80.0" cy="160.0" r="4.8" fill="url(#grad_red)" />
   <circle cx="160.0" cy="81.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="160.0" cy="80.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="160.0" cy="80.0" r="16.0" fill="none" stroke="url(#grad_red)" stroke-width="2.5" />
-  <circle cx="160.0" cy="80.0" r="4.8" fill="url(#grad_red)" />
   <circle cx="160.0" cy="161.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="160.0" cy="160.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="160.0" cy="160.0" r="16.0" fill="none" stroke="url(#grad_red)" stroke-width="2.5" />
-  <circle cx="160.0" cy="160.0" r="4.8" fill="url(#grad_red)" />
   <rect x="360.0" y="0.0" width="240.0" height="240.0" fill="url(#grad_green)" stroke="#1e293b" stroke-width="1.5" />
   <rect x="402.0" y="43.0" width="160.0" height="160.0" rx="16.0" ry="16.0" fill="#000000" opacity="0.08" />
   <rect x="400.0" y="40.0" width="160.0" height="160.0" rx="16.0" ry="16.0" fill="url(#grad_white)" stroke="#cbd5e1" stroke-width="1.5" />
   <circle cx="440.0" cy="81.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="440.0" cy="80.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="440.0" cy="80.0" r="16.0" fill="none" stroke="url(#grad_green)" stroke-width="2.5" />
-  <circle cx="440.0" cy="80.0" r="4.8" fill="url(#grad_green)" />
   <circle cx="440.0" cy="161.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="440.0" cy="160.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="440.0" cy="160.0" r="16.0" fill="none" stroke="url(#grad_green)" stroke-width="2.5" />
-  <circle cx="440.0" cy="160.0" r="4.8" fill="url(#grad_green)" />
   <circle cx="520.0" cy="81.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="520.0" cy="80.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="520.0" cy="80.0" r="16.0" fill="none" stroke="url(#grad_green)" stroke-width="2.5" />
-  <circle cx="520.0" cy="80.0" r="4.8" fill="url(#grad_green)" />
   <circle cx="520.0" cy="161.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="520.0" cy="160.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="520.0" cy="160.0" r="16.0" fill="none" stroke="url(#grad_green)" stroke-width="2.5" />
-  <circle cx="520.0" cy="160.0" r="4.8" fill="url(#grad_green)" />
   <rect x="360.0" y="360.0" width="240.0" height="240.0" fill="url(#grad_yellow)" stroke="#1e293b" stroke-width="1.5" />
   <rect x="402.0" y="403.0" width="160.0" height="160.0" rx="16.0" ry="16.0" fill="#000000" opacity="0.08" />
   <rect x="400.0" y="400.0" width="160.0" height="160.0" rx="16.0" ry="16.0" fill="url(#grad_white)" stroke="#cbd5e1" stroke-width="1.5" />
   <circle cx="440.0" cy="441.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="440.0" cy="440.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="440.0" cy="440.0" r="16.0" fill="none" stroke="url(#grad_yellow)" stroke-width="2.5" />
-  <circle cx="440.0" cy="440.0" r="4.8" fill="url(#grad_yellow)" />
   <circle cx="440.0" cy="521.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="440.0" cy="520.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="440.0" cy="520.0" r="16.0" fill="none" stroke="url(#grad_yellow)" stroke-width="2.5" />
-  <circle cx="440.0" cy="520.0" r="4.8" fill="url(#grad_yellow)" />
   <circle cx="520.0" cy="441.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="520.0" cy="440.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="520.0" cy="440.0" r="16.0" fill="none" stroke="url(#grad_yellow)" stroke-width="2.5" />
-  <circle cx="520.0" cy="440.0" r="4.8" fill="url(#grad_yellow)" />
   <circle cx="520.0" cy="521.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="520.0" cy="520.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="520.0" cy="520.0" r="16.0" fill="none" stroke="url(#grad_yellow)" stroke-width="2.5" />
-  <circle cx="520.0" cy="520.0" r="4.8" fill="url(#grad_yellow)" />
   <rect x="0.0" y="360.0" width="240.0" height="240.0" fill="url(#grad_blue)" stroke="#1e293b" stroke-width="1.5" />
   <rect x="42.0" y="403.0" width="160.0" height="160.0" rx="16.0" ry="16.0" fill="#000000" opacity="0.08" />
   <rect x="40.0" y="400.0" width="160.0" height="160.0" rx="16.0" ry="16.0" fill="url(#grad_white)" stroke="#cbd5e1" stroke-width="1.5" />
   <circle cx="80.0" cy="441.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="80.0" cy="440.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="80.0" cy="440.0" r="16.0" fill="none" stroke="url(#grad_blue)" stroke-width="2.5" />
-  <circle cx="80.0" cy="440.0" r="4.8" fill="url(#grad_blue)" />
   <circle cx="80.0" cy="521.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="80.0" cy="520.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="80.0" cy="520.0" r="16.0" fill="none" stroke="url(#grad_blue)" stroke-width="2.5" />
-  <circle cx="80.0" cy="520.0" r="4.8" fill="url(#grad_blue)" />
   <circle cx="160.0" cy="441.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="160.0" cy="440.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="160.0" cy="440.0" r="16.0" fill="none" stroke="url(#grad_blue)" stroke-width="2.5" />
-  <circle cx="160.0" cy="440.0" r="4.8" fill="url(#grad_blue)" />
   <circle cx="160.0" cy="521.5" r="22.0" fill="#000000" opacity="0.05" />
   <circle cx="160.0" cy="520.0" r="22.0" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1" />
   <circle cx="160.0" cy="520.0" r="16.0" fill="none" stroke="url(#grad_blue)" stroke-width="2.5" />
-  <circle cx="160.0" cy="520.0" r="4.8" fill="url(#grad_blue)" />
   <polygon points="240.0,240.0 240.0,360.0 300.0,300.0" fill="url(#grad_red)" stroke="#1e293b" stroke-width="1.5" />
   <polygon points="240.0,240.0 360.0,240.0 300.0,300.0" fill="url(#grad_green)" stroke="#1e293b" stroke-width="1.5" />
   <polygon points="360.0,240.0 360.0,360.0 300.0,300.0" fill="url(#grad_yellow)" stroke="#1e293b" stroke-width="1.5" />

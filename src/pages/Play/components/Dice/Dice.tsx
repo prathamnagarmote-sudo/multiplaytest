@@ -4,9 +4,11 @@ import dice3 from '../../../../assets/dice/3.svg';
 import dice4 from '../../../../assets/dice/4.svg';
 import dice5 from '../../../../assets/dice/5.svg';
 import dice6 from '../../../../assets/dice/6.svg';
-import { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useContext } from 'react';
 import { type TPlayerColour } from '../../../../types';
 import { useDispatch, useSelector } from 'react-redux';
+import { OnlineGameContext } from '../Game/Game';
+import { socket } from '../../../../services/socket';
 import type { AppDispatch, RootState } from '../../../../state/store';
 import { rollDiceThunk } from '../../../../state/thunks/rollDiceThunk';
 import { playerColours } from '../../../../game/players/constants';
@@ -27,10 +29,12 @@ type Props = {
   colour: TPlayerColour;
   playerName: string;
   onDiceClick: (colour: TPlayerColour, diceNumber: number) => void;
+  positionColour?: TPlayerColour;
 };
 
-function Dice({ colour, onDiceClick, playerName }: Props) {
+function Dice({ colour, onDiceClick, playerName, positionColour }: Props) {
   const dispatch = useDispatch<AppDispatch>();
+  const onlineContext = useContext(OnlineGameContext);
   const {
     isAnyTokenMoving,
     isGameEnded,
@@ -46,8 +50,10 @@ function Dice({ colour, onDiceClick, playerName }: Props) {
   );
   const isBot = players.find((p) => p.colour === colour)?.isBot;
   const isCurrentPlayer = currentPlayer === colour;
+  const isMyTurn = onlineContext?.isOnline ? colour === onlineContext.myPlayerColour : true;
   const isDiceDisabled =
     !isCurrentPlayer ||
+    !isMyTurn ||
     anyTokenActive ||
     isAnyTokenMoving ||
     isGameEnded ||
@@ -57,8 +63,12 @@ function Dice({ colour, onDiceClick, playerName }: Props) {
   const handleDiceClick = useCallback(() => {
     if (isDiceDisabled) return;
     playDiceRollSound();
-    dispatch(rollDiceThunk(colour, (diceNumber) => onDiceClick(colour, diceNumber)));
-  }, [colour, dispatch, isDiceDisabled, onDiceClick]);
+    if (onlineContext?.isOnline) {
+      socket.emit('request_roll', { roomId: onlineContext.roomId });
+    } else {
+      dispatch(rollDiceThunk(colour, (diceNumber) => onDiceClick(colour, diceNumber)));
+    }
+  }, [colour, dispatch, isDiceDisabled, onDiceClick, onlineContext]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -69,23 +79,58 @@ function Dice({ colour, onDiceClick, playerName }: Props) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleDiceClick, isDiceDisabled]);
 
+  const playerObj = players.find((p) => p.colour === colour);
+  const avatarUrl = playerObj?.avatarUrl;
+  const level = playerObj?.level;
+  const hasAvatar = !!(onlineContext?.isOnline && avatarUrl);
+
   return (
     <div
-      className={clsx(styles.diceContainer, styles[colour], {
+      className={clsx(styles.diceContainer, styles[positionColour || colour], {
         [styles.activeContainer]: !isDiceDisabled,
       })}
     >
+      {isCurrentPlayer && (
+        <div className={styles.turnArrow} title="Active Turn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
+          </svg>
+        </div>
+      )}
       <div className={styles.playerInfo}>
-        <TokenImage
-          className={styles.miniToken}
-          aria-hidden="true"
-          style={
-            {
-              '--fill-colour': woodStainColours[colour],
-            } as React.CSSProperties
-          }
-        />
-        <span className={styles.playerName}>{playerName}</span>
+        {hasAvatar ? (
+          <img
+            src={avatarUrl}
+            className={styles.playerAvatar}
+            alt={playerName}
+            style={
+              {
+                '--avatar-border-color': playerColours[colour],
+              } as React.CSSProperties
+            }
+          />
+        ) : (
+          <TokenImage
+            className={styles.miniToken}
+            aria-hidden="true"
+            style={
+              {
+                '--fill-colour': woodStainColours[colour],
+              } as React.CSSProperties
+            }
+          />
+        )}
+        <div className={styles.nameAndLevel}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span className={styles.playerName}>{playerName.replace(' (Bot)', '')}</span>
+            {isBot && (
+              <span style={{ fontSize: '9px', background: '#e53935', color: 'white', padding: '2px 4px', borderRadius: '4px', fontWeight: 900, letterSpacing: '0.5px', lineHeight: 1 }}>BOT</span>
+            )}
+          </div>
+          {onlineContext?.isOnline && level !== undefined && (
+            <span className={styles.playerLevel}>Lv. {level}</span>
+          )}
+        </div>
       </div>
       <div className={styles.diceWrapper}>
         <button

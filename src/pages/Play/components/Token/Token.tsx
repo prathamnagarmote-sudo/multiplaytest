@@ -1,8 +1,10 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState, useContext } from 'react';
 import { deactivateAllTokens, setIsAnyTokenMoving } from '../../../../state/slices/playersSlice';
 import { type TPlayer, type TPlayerColour, type TTokenClickData } from '../../../../types';
 import { type TToken } from '../../../../types';
 import { useDispatch, useSelector } from 'react-redux';
+import { OnlineGameContext } from '../Game/Game';
+import { socket } from '../../../../services/socket';
 import type { AppDispatch, RootState } from '../../../../state/store';
 import TokenImage from '../../../../assets/token.svg?react';
 import { useCoordsToPosition } from '../../../../hooks/useCoordsToPosition';
@@ -51,6 +53,8 @@ function Token({ colour, id, tokenClickData }: Props) {
   )?.diceNumber;
   const moveAndCapture = useMoveAndCaptureToken();
 
+  const onlineContext = useContext(OnlineGameContext);
+
   const unlock = () => {
     dispatch(setIsAnyTokenMoving(true));
     setTokenTransitionTime(FORWARD_TOKEN_TRANSITION_TIME, token);
@@ -80,14 +84,32 @@ function Token({ colour, id, tokenClickData }: Props) {
     if (!newTokenClickData || prevClickData?.timestamp === newTokenClickData.timestamp) return;
     tokenClickDataRef.current = newTokenClickData;
 
-    if (newTokenClickData.colour === colour && newTokenClickData.id === id) executeTokenMove();
-  }, [colour, executeTokenMove, id, tokenClickData]);
+    if (newTokenClickData.colour === colour && newTokenClickData.id === id) {
+      if (onlineContext?.isOnline) {
+        socket.emit('submit_move', {
+          roomId: onlineContext.roomId,
+          tokenId: id,
+          isUnlock: isLocked
+        });
+      } else {
+        executeTokenMove();
+      }
+    }
+  }, [colour, executeTokenMove, id, tokenClickData, onlineContext, isLocked]);
 
   const handleTokenClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
     if (e.detail === 0) e.stopPropagation();
-    if (isLocked && isActive && diceNumber !== -1 && diceNumber) unlock();
     tokenElRef.current?.blur?.();
-    executeTokenMove();
+    if (onlineContext?.isOnline) {
+      socket.emit('submit_move', {
+        roomId: onlineContext.roomId,
+        tokenId: id,
+        isUnlock: isLocked
+      });
+    } else {
+      if (isLocked && isActive && diceNumber !== -1 && diceNumber) unlock();
+      executeTokenMove();
+    }
   };
 
   return (
@@ -104,7 +126,7 @@ function Token({ colour, id, tokenClickData }: Props) {
         {
           '--token-height': `${tokenHeight}px`,
           '--token-width': `${tokenWidth}px`,
-          transform: `translate3d(${x}, ${y}, 12px) scale(${scaleFactor}) rotateX(-12deg) rotateY(5deg)`,
+          transform: `translate3d(${x}, ${y}, 12px) rotate(calc(-1 * var(--board-rotation, 0deg))) translate3d(0, -30%, 0) scale(${scaleFactor}) rotateX(-12deg) rotateY(5deg)`,
         } as React.CSSProperties
       }
     >

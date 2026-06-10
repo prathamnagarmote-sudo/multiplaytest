@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   gap: calc(var(--board-tile-size) * 0.2);
-  width: calc(var(--board-tile-size) * 4.2);
+  width: calc(var(--board-tile-size) * 5.8);
   height: calc(var(--board-tile-size) * 1.6);
   background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(10px) saturate(140%);
@@ -89,7 +89,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(var(--board-tile-size) * 2.1);
+  max-width: calc(var(--board-tile-size) * 3.5);
 }
 .dice-container.green .player-name,
 .dice-container.yellow .player-name {
@@ -278,3 +278,71 @@
     transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
   }
 }
+
+.player-avatar {
+  width: calc(var(--board-tile-size) * 0.85);
+  height: calc(var(--board-tile-size) * 0.85);
+  border-radius: 50%;
+  border: 2px solid var(--avatar-border-color);
+  box-shadow: 0 0 8px var(--avatar-border-color);
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-avatar:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px var(--avatar-border-color), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.name-and-level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.dice-container.green .name-and-level,
+.dice-container.yellow .name-and-level {
+  align-items: flex-end;
+}
+
+.player-level {
+  color: #ffca28;
+  font-weight: 700;
+  font-size: calc(var(--board-tile-size) * 0.26);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 1px;
+}
+
+.turn-arrow {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  color: #ffca28;
+  filter: drop-shadow(0 2px 4px rgba(255, 202, 40, 0.75));
+  animation: arrowBounce 1.2s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 60;
+}
+
+.turn-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-6px);
+  }
+}
+
+

@@ -55,6 +55,13 @@ const reducers = {
   renewRollBag: (state: TDiceState, action: PayloadAction<TPlayerColour>) => {
     state.rollBag[action.payload] = generateRollBag();
   },
+  setDiceNumberDirect: (
+    state: TDiceState,
+    action: PayloadAction<{ colour: TPlayerColour; diceNumber: number }>
+  ) => {
+    const dice = getDice(state, action.payload.colour);
+    dice.diceNumber = action.payload.diceNumber;
+  },
   clearDiceState: () => initialState,
 };
 
@@ -69,6 +76,7 @@ export const {
   setDiceNumber,
   setIsPlaceholderShowing,
   renewRollBag,
+  setDiceNumberDirect,
   clearDiceState,
 } = diceSlice.actions;
 

@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "type-check": "tsc --noEmit --project ./tsconfig.app.json",
     "host": "vite --host",
+    "server": "node server/index.js",
     "test": "vitest run --reporter verbose",
     "test:watch": "vitest --reporter verbose",
     "test:coverage": "vitest run --coverage"
@@ -37,6 +38,7 @@
     "react-toastify": "^11.0.5",
     "react-tooltip": "^5.30.0",
     "react-use": "^17.6.0",
+    "socket.io-client": "^4.8.3",
     "workbox-window": "^7.4.1"
   },
   "devDependencies": {
